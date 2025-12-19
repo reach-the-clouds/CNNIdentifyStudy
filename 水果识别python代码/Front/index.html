@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>水果识别前端</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>水果识别</h1>
+    <p class="sub">上传图片，点击识别，查看营养信息</p>
+    <div class="uploader">
+      <label class="file-label">
+        <input id="fileInput" type="file" accept="image/*" />
+        选择图片
+      </label>
+      <button id="predictBtn">识别</button>
+    </div>
+    <div class="grid">
+      <div class="preview">
+        <img id="previewImg" alt="预览" />
+      </div>
+      <div class="info">
+        <div class="result">
+          <span id="resultText"></span>
+          <div id="resultTags" class="result-tags"></div>
+        </div>
+        <div id="nutritionCard" class="nutrition-card hidden">
+          <div class="nutrition-title">营养价值</div>
+          <div class="nutrition-header">
+            <div id="nutritionName" class="nutrition-name"></div>
+            <span id="nutritionGrade" class="grade-badge"></span>
+          </div>
+          <div class="nutrition-grid">
+            <div class="nutrition-item"><span class="label">热量</span><span id="nut_cal"></span></div>
+            <div class="nutrition-item"><span class="label">碳水</span><span id="nut_carbs"></span></div>
+            <div class="nutrition-item"><span class="label">膳食纤维</span><span id="nut_fiber"></span></div>
+            <div class="nutrition-item"><span class="label">维生素C</span><span id="nut_vitc"></span></div>
+            <div class="nutrition-item"><span class="label">蛋白质</span><span id="nut_protein"></span></div>
+            <div class="nutrition-item"><span class="label">脂肪</span><span id="nut_fat"></span></div>
+            <div class="nutrition-item"><span class="label">糖</span><span id="nut_sugar"></span></div>
+            <div class="nutrition-item"><span class="label">钾</span><span id="nut_potassium"></span></div>
+            <div class="nutrition-item"><span class="label">钙</span><span id="nut_calcium"></span></div>
+            <div class="nutrition-item"><span class="label">铁</span><span id="nut_iron"></span></div>
+            <div class="nutrition-item"><span class="label">钠</span><span id="nut_sodium"></span></div>
+          </div>
+          <div class="nutrition-note">每100克可食部分的典型参考值</div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="app.js"></script>
+  </body>
+</html>

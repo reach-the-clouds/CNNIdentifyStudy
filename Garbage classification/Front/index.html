@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>垃圾识别前端</title>
+<link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+<div class="container">
+  <h1>垃圾识别</h1>
+  <div class="uploader">
+    <input id="fileInput" type="file" accept="image/*" />
+    <button id="predictBtn">识别</button>
+  </div>
+  <div class="preview">
+    <img id="previewImg" alt="预览" />
+  </div>
+  <div class="result">
+    <span id="resultText"></span>
+  </div>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

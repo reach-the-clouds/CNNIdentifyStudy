@@ -1,0 +1,246 @@
+* {
+    box-sizing: border-box
+}
+
+:root {
+    --accent: #2563eb;
+    --accent-strong: #1d4ed8;
+    --accent-weak: #eaf2ff;
+    --bg-start: #f0f7ff;
+    --bg-end: #fff7f2;
+    --border: #e5e7eb;
+    --text: #111;
+    --muted: #667085
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, blinkmacsystemfont, "Segoe UI", Roboto, Arial, "Noto Sans", sans-serif;
+    background: linear-gradient(135deg, var(--bg-start), var(--bg-end));
+    color: var(--text)
+}
+
+.container {
+    max-width: 980px;
+    margin: 64px auto;
+    padding: 28px;
+    background: #fff;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(16, 24, 40, .08)
+}
+
+h1 {
+    margin: 0 0 8px;
+    font-size: 28px;
+    letter-spacing: .5px
+}
+
+.sub {
+    margin: 0 0 20px;
+    color: var(--muted);
+    font-size: 14px
+}
+
+.uploader {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+    margin-bottom: 16px
+}
+
+.file-label {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    background: #f9fafb;
+    color: #344054;
+    cursor: pointer;
+    transition: all .15s ease
+}
+
+.file-label:hover {
+    border-color: var(--accent);
+    box-shadow: 0 0 0 3px var(--accent-weak)
+}
+
+.file-label input {
+    display: none
+}
+
+#predictBtn {
+    padding: 10px 18px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background .15s ease, transform .06s ease
+}
+
+#predictBtn:hover {
+    background: var(--accent-strong)
+}
+
+#predictBtn:active {
+    transform: translateY(1px)
+}
+
+#predictBtn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    justify-items: stretch;
+    align-items: start
+}
+
+.preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 360px;
+    border: 2px dashed var(--accent-weak);
+    border-radius: 16px;
+    background: #fafafa;
+    overflow: hidden
+}
+
+#previewImg {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+    border-radius: 12px
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px
+}
+
+.result {
+    font-size: 18px;
+    min-height: 28px
+}
+
+.result-tags {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px
+}
+
+.badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    border: 1px solid var(--border);
+    background: var(--accent-weak);
+    color: var(--accent-strong)
+}
+
+.badge-en {
+    opacity: .9
+}
+
+.nutrition-card {
+    border: 1px solid #e5e7eb;
+    border-radius: 12px;
+    padding: 16px;
+    background: #fcfcfd
+}
+
+.nutrition-title {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 8px
+}
+
+.nutrition-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px
+}
+
+.nutrition-name {
+    font-size: 15px;
+    color: #475467
+}
+
+.grade-badge {
+    display: inline-flex;
+    align-items: center;
+    padding: 6px 10px;
+    border-radius: 999px;
+    font-size: 12px;
+    border: 1px solid #e5e7eb
+}
+
+.grade-a {
+    background: #ecfdf3;
+    color: #027a48;
+    border-color: #a6f4c5
+}
+
+.grade-b {
+    background: #fff7ed;
+    color: #c2410c;
+    border-color: #fed7aa
+}
+
+.grade-c {
+    background: #fef3f2;
+    color: #b42318;
+    border-color: #fecaca
+}
+
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px
+}
+
+.nutrition-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 12px;
+    border: 1px solid #edf2f7;
+    border-radius: 10px;
+    background: #fff
+}
+
+.nutrition-item .label {
+    color: #667085
+}
+
+.nutrition-note {
+    margin-top: 10px;
+    color: #98a2b3;
+    font-size: 12px
+}
+
+.hidden {
+    display: none
+}
+
+@media (max-width: 840px) {
+    .grid {
+        grid-template-columns: 1fr
+    }
+
+    .preview {
+        height: 300px
+    }
+}
